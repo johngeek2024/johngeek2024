@@ -332,25 +332,29 @@ ${lines.map((l, k) => `<text x="${x + 16}" y="${y + 74 + k * 18}" font-size="12"
 }
 
 // ───────────────────────── tarjetas de proyecto ─────────────────────────
-function card(p) {
-  const W = 440, H = 316;
+function card(p, img = '') {
+  const W = 440, H = 368;
   const lines = wrap(p.desc, 54).slice(0, 3);
   return svg(W, H, `${p.name}: ${p.desc}`, `
 <defs>
   ${gridDefs('cg', 20, 0.12)}
   <radialGradient id="glow" cx=".7" cy=".3" r=".6"><stop offset="0" stop-color="${p.glow}" stop-opacity=".4"/><stop offset="1" stop-color="${p.glow}" stop-opacity="0"/></radialGradient>
+  <linearGradient id="shade" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#05060A" stop-opacity=".15"/><stop offset=".55" stop-color="#05060A" stop-opacity=".35"/><stop offset="1" stop-color="#05060A" stop-opacity=".92"/></linearGradient>
 </defs>
 <rect x=".5" y=".5" width="${W - 1}" height="${H - 1}" fill="#070B14" stroke="${C.cyan}" stroke-opacity=".3"/>
-<rect x="1" y="1" width="${W - 2}" height="138" fill="#0A1020"/>
-<rect x="1" y="1" width="${W - 2}" height="138" fill="url(#glow)"/>
-<rect x="1" y="1" width="${W - 2}" height="138" fill="url(#cg)"/>
-<line x1="1" y1="139.5" x2="${W - 1}" y2="139.5" stroke="${C.cyan}" stroke-opacity=".25"/>
-<text x="18" y="124" class="d" font-size="40" fill="${C.white}" fill-opacity=".92">${esc(p.code)}</text>
+<rect x="1" y="1" width="${W - 2}" height="190" fill="#0A1020"/>
+${img ? `<clipPath id="pv"><rect x="1" y="1" width="${W - 2}" height="190"/></clipPath>
+<g clip-path="url(#pv)"><image x="1" y="1" width="${W - 2}" height="190" preserveAspectRatio="xMidYMin slice" href="data:image/jpeg;base64,${img}"/></g>
+<rect x="1" y="1" width="${W - 2}" height="190" fill="url(#shade)"/>` : ''}
+<rect x="1" y="1" width="${W - 2}" height="190" fill="url(#glow)" opacity="${img ? 0.5 : 1}"/>
+<rect x="1" y="1" width="${W - 2}" height="190" fill="url(#cg)" opacity="${img ? 0.55 : 1}"/>
+<line x1="1" y1="191.5" x2="${W - 1}" y2="191.5" stroke="${C.cyan}" stroke-opacity=".25"/>
+<text x="18" y="172" class="d" font-size="34" fill="${C.white}" fill-opacity=".92">${esc(p.code)}</text>
 <text x="${W - 16}" y="24" font-size="10" letter-spacing="2" fill="${p.tag === 'LIVE' ? C.green : C.mute}" text-anchor="end">${p.tag === 'LIVE' ? '● ' : ''}${p.tag}</text>
-<text x="18" y="170" font-size="10" letter-spacing="3" fill="${C.mag}">${esc(p.kind)}</text>
-<text x="18" y="198" class="d" font-size="20" fill="${C.white}">${esc(p.name)}</text>
-${lines.map((l, k) => `<text x="18" y="${222 + k * 18}" font-size="12" fill="${C.soft}">${esc(l)}</text>`).join('')}
-<text x="18" y="294" font-size="12" fill="${C.cyan}">${esc(p.cta)} ↗</text>`);
+<text x="18" y="222" font-size="10" letter-spacing="3" fill="${C.mag}">${esc(p.kind)}</text>
+<text x="18" y="250" class="d" font-size="20" fill="${C.white}">${esc(p.name)}</text>
+${lines.map((l, k) => `<text x="18" y="${274 + k * 18}" font-size="12" fill="${C.soft}">${esc(l)}</text>`).join('')}
+<text x="18" y="346" font-size="12" fill="${C.cyan}">${esc(p.cta)} ↗</text>`);
 }
 
 // ───────────────────────── pie ─────────────────────────
@@ -385,7 +389,11 @@ const files = {
   'modules.svg': modules(),
   'footer.svg': footer(),
 };
-for (const p of PROJECTS) files[p.file + '.svg'] = card(p);
+for (const p of PROJECTS) {
+  // Vista previa opcional: assets/neo/previews/<file>.jpg se incrusta en la franja superior.
+  const img = await readFile(join(OUT, 'previews', p.file + '.jpg')).then((b) => b.toString('base64')).catch(() => '');
+  files[p.file + '.svg'] = card(p, img);
+}
 
 for (const [name, content] of Object.entries(files)) {
   await writeFile(join(OUT, name), content);

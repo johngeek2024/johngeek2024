@@ -82,12 +82,12 @@ export function renderStatus({ sites, gh, at }) {
   <circle cx="76" cy="40" r="7" fill="${st.c}"><animate attributeName="opacity" values="1;.35;1" dur="2.4s" repeatCount="indefinite"/></circle>
   <circle cx="76" cy="40" r="13" fill="none" stroke="${st.c}" stroke-opacity=".35"/>
   <text x="108" y="36" font-family="IN,sans-serif" font-weight="600" font-size="22" fill="#e9edf7">${esc(s.name)}</text>
-  <text x="108" y="60" font-family="JB,monospace" font-size="13" fill="#8b96b0">${esc(s.label)}</text>
-  <text x="520" y="36" font-family="JB,monospace" font-weight="700" font-size="13" letter-spacing="2" fill="${st.c}">${esc(st.txt.toUpperCase())}</text>
-  <text x="520" y="60" font-family="JB,monospace" font-size="13" fill="#8b96b0">HTTP ${s.code || '---'}</text>
+  <text x="108" y="60" font-family="JB,monospace" font-size="16" fill="#8b96b0">${esc(s.label)}</text>
+  <text x="520" y="36" font-family="JB,monospace" font-weight="700" font-size="16" letter-spacing="2" fill="${st.c}">${esc(st.txt.toUpperCase())}</text>
+  <text x="520" y="60" font-family="JB,monospace" font-size="16" fill="#8b96b0">HTTP ${s.code || '---'}</text>
   <rect x="700" y="34" width="300" height="6" rx="3" fill="#162040"/>
   <rect x="700" y="34" width="${bar}" height="6" rx="3" fill="${st.c}"/>
-  <text x="1130" y="50" text-anchor="end" font-family="IS,serif" font-size="40" fill="#f2d58a">${s.ms ? s.ms : '—'}<tspan font-family="JB,monospace" font-size="14" fill="#8b96b0" dx="6">ms</tspan></text>
+  <text x="1130" y="50" text-anchor="end" font-family="IS,serif" font-size="40" fill="#f2d58a">${s.ms ? s.ms : '—'}<tspan font-family="JB,monospace" font-size="17" fill="#8b96b0" dx="6">ms</tspan></text>
 </g>`;
     })
     .join('\n');
@@ -100,11 +100,11 @@ export function renderStatus({ sites, gh, at }) {
 ${rows}
 <g transform="translate(0 ${y2})">
   <line x1="40" y1="14" x2="1160" y2="14" stroke="#1f2a4a"/>
-  <text x="40" y="52" font-family="JB,monospace" font-size="12" letter-spacing="2" fill="#8b96b0">CUENTA PUBLICA</text>
-  <text x="40" y="100" font-family="IS,serif" font-size="46" fill="#e9edf7">${n(gh.repos)}<tspan font-family="IN,sans-serif" font-size="15" fill="#8b96b0" dx="8">repos públicos</tspan></text>
-  <text x="330" y="100" font-family="IS,serif" font-size="46" fill="#e9edf7">${n(gh.followers)}<tspan font-family="IN,sans-serif" font-size="15" fill="#8b96b0" dx="8">seguidores</tspan></text>
-  <text x="1160" y="52" text-anchor="end" font-family="JB,monospace" font-size="12" letter-spacing="2" fill="#8b96b0">MEDIDO ${esc(stamp)}</text>
-  <text x="1160" y="76" text-anchor="end" font-family="JB,monospace" font-size="12" fill="#5d6a8a">desde GitHub Actions · se actualiza cada 6 h</text>
+  <text x="40" y="52" font-family="JB,monospace" font-size="15" letter-spacing="2" fill="#8b96b0">CUENTA PUBLICA</text>
+  <text x="40" y="100" font-family="IS,serif" font-size="46" fill="#e9edf7">${n(gh.repos)}<tspan font-family="IN,sans-serif" font-size="17" fill="#8b96b0" dx="8">repos públicos</tspan></text>
+  <text x="330" y="100" font-family="IS,serif" font-size="46" fill="#e9edf7">${n(gh.followers)}<tspan font-family="IN,sans-serif" font-size="17" fill="#8b96b0" dx="8">seguidores</tspan></text>
+  <text x="1160" y="52" text-anchor="end" font-family="JB,monospace" font-size="15" letter-spacing="2" fill="#8b96b0">MEDIDO ${esc(stamp)}</text>
+  <text x="1160" y="76" text-anchor="end" font-family="JB,monospace" font-size="15" fill="#5d6a8a">desde GitHub Actions · se actualiza cada 6 h</text>
 </g>
 </svg>`;
 }

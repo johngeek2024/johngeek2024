@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="160" viewBox="0 0 1200 160" role="img" aria-label="Gracias por pasar"><defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0b1020"/><stop offset="1" stop-color="#120a2a"/></linearGradient>
+<linearGradient id="ac" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#22d3ee"/><stop offset="0.5" stop-color="#818cf8"/><stop offset="1" stop-color="#f472b6"/></linearGradient>
+<radialGradient id="o1"><stop offset="0" stop-color="#22d3ee" stop-opacity=".35"/><stop offset="1" stop-color="#22d3ee" stop-opacity="0"/></radialGradient>
+<radialGradient id="o2"><stop offset="0" stop-color="#f472b6" stop-opacity=".30"/><stop offset="1" stop-color="#f472b6" stop-opacity="0"/></radialGradient>
+<pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#ffffff" stroke-opacity=".045"/></pattern>
+</defs>
+<clipPath id="r2"><rect width="1200" height="160" rx="22"/></clipPath><g clip-path="url(#r2)"><rect width="1200" height="160" fill="url(#bg)"/>
+<path d="M0 100 C150 60 300 140 450 100 S750 60 900 100 S1100 130 1200 90 V160 H0Z" fill="url(#ac)" opacity=".35"><animate attributeName="d" dur="8s" repeatCount="indefinite" values="M0 100 C150 60 300 140 450 100 S750 60 900 100 S1100 130 1200 90 V160 H0Z;M0 90 C150 130 300 60 450 100 S750 140 900 90 S1100 60 1200 100 V160 H0Z;M0 100 C150 60 300 140 450 100 S750 60 900 100 S1100 130 1200 90 V160 H0Z"/></path>
+<path d="M0 120 C200 90 400 150 600 120 S1000 90 1200 125 V160 H0Z" fill="url(#ac)" opacity=".55"/></g>
+<text x="600" y="66" text-anchor="middle" font-family="'Segoe UI',Inter,system-ui,-apple-system,Helvetica,Arial,sans-serif" font-size="26" font-weight="700" fill="#f8fafc">Gracias por pasar. Si algo falla, fue el caché.</text>
+<text x="600" y="96" text-anchor="middle" font-family="'JetBrains Mono','Fira Code',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="14" fill="#94a3b8">© 2026 Jonathan Moreno · hecho a mano en Venezuela</text>
+</svg>

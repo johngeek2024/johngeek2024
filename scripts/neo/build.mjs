@@ -267,7 +267,7 @@ ${brackets(66, 84, 372, 630, 22, 'rgba(34,230,255,.7)', 'rgba(255,61,203,.7)', 1
 <text x="438" y="706" font-size="9" letter-spacing="2" fill="${C.mute}" text-anchor="end">RENDER: OK</text>
 
 <!-- info -->
-<text x="${x0}" y="100" font-size="11" letter-spacing="4" fill="${C.mag}">CTO · BARATONGOVZLA</text>
+<text x="${x0}" y="100" font-size="11" letter-spacing="4" fill="${C.mag}">COFUNDADOR Y CTO · BARATONGOVZLA</text>
 <g filter="url(#nameGlow)">
   <text x="${x0 - 2}" y="150" class="d" font-size="46" fill="${C.white}">JONATHAN</text>
   <text x="${x0 - 2}" y="194" class="d" font-size="46" fill="${C.cyan}">MORENO</text>

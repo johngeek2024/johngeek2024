@@ -13,7 +13,7 @@
 
 <img src="assets/neo/h-01.svg" alt="01 Sobre mí" width="100%"/>
 
-Soy el CTO de [BaratongoVzla](https://baratongovzla.com), en Valencia, Venezuela. Construyo tiendas, blogs y paneles de administración que cargan rápido, posicionan en Google y se pagan solos.
+Soy cofundador y CTO de [BaratongoVzla](https://baratongovzla.com), en Valencia, Venezuela. Construyo tiendas, blogs y paneles de administración que cargan rápido, posicionan en Google y se pagan solos.
 
 Mi trabajo es que las ideas funcionen de verdad: Pago Móvil, pedidos por WhatsApp, sitios bilingües e invitaciones de boda con sello de lacre y cuenta regresiva. Sí, también eso.
 
@@ -24,7 +24,7 @@ Mi trabajo es que las ideas funcionen de verdad: Pago Móvil, pedidos por WhatsA
 
 <br/>
 
-CTO at BaratongoVzla (Valencia, Venezuela). I build e-commerce sites, blogs and admin panels with Astro, Next.js, TypeScript and Firebase. My sites are bilingual (Spanish, English, Chinese), built around local payment flows (Pago Móvil, Binance Pay) and WhatsApp order handling, with technical SEO included. I'm also an Amazon Influencer (@BaratongoVzla). Source code is private; the invitation projects below have public demos with fictional data.
+Co-founder and CTO at BaratongoVzla (Valencia, Venezuela). I build e-commerce sites, blogs and admin panels with Astro, Next.js, TypeScript and Firebase. My sites are bilingual (Spanish, English, Chinese), built around local payment flows (Pago Móvil, Binance Pay) and WhatsApp order handling, with technical SEO included. I'm also an Amazon Influencer (@BaratongoVzla). Source code is private; the invitation projects below have public demos with fictional data.
 
 </details>
 

@@ -1,0 +1,46 @@
+name: README neón
+
+on:
+  schedule:
+    - cron: "17 10 * * *"   # todos los días, 6:17 a. m. hora de Venezuela
+  workflow_dispatch:         # botón "Run workflow" en la pestaña Actions
+  push:
+    branches: [main]
+    paths:
+      - "scripts/neo/**"
+      - ".github/workflows/neo-readme.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: neo-readme
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Generar SVG
+        run: node scripts/neo/build.mjs
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_USER: ${{ github.repository_owner }}
+
+      - name: Guardar cambios
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/neo
+          if git diff --cached --quiet; then
+            echo "Sin cambios."
+          else
+            git commit -m "chore(readme): actualizar SVG neón [skip ci]"
+            git push
+          fi

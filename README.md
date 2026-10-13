@@ -15,7 +15,7 @@
 
 **Hago videos que venden gadgets. Lo demás es consecuencia.**
 
-Soy John Moreno, creador de contenido de tecnología y cofundador de [BaratongoVzla](https://baratongovzla.com), en Valencia, Venezuela. Llevo 144 videos de producto para la marca, que ya suma 63 mil seguidores y casi 300 mil me gusta en TikTok. Uno de ellos, el del proyector que convirtió mi techo en un cine 4K, pasó de 1,3 millones de vistas. Eso se explica con un buen producto, un gancho de tres segundos y gente a la que le encanta ver un techo convertido en cine.
+Soy John Moreno, creador de contenido de tecnología y cofundador de [BaratongoVzla](https://baratongovzla.com), en Valencia, Venezuela. Llevo más de 140 videos de producto para la marca, y contando. La marca ya suma 63 mil seguidores y casi 300 mil me gusta en TikTok. Uno de ellos, el del proyector que convirtió mi techo en un cine 4K, pasó de 1,3 millones de vistas. Eso se explica con un buen producto, un gancho de tres segundos y gente a la que le encanta ver un techo convertido en cine.
 
 Mi método es simple: cuento lo que el producto hace de verdad, sin humo, y con el humor justo para que veas el video completo. Un video aburrido es un anuncio que nadie pidió.
 
@@ -28,7 +28,7 @@ Si eres una marca de tecnología, puedo hacerte el video que tu producto merece.
 
 <br/>
 
-Tech and gadgets content creator, and co-founder and CTO of BaratongoVzla (Valencia, Venezuela). I've made 144 product videos for the brand (63K TikTok followers, ~300K likes), one of them with 1.3M views, and roughly 3 in 10 of my viewers are in the US. I explain what a product really does, in neutral Latin American Spanish, with humor and no hype. I'm also an Amazon Influencer (@BaratongoVzla) and I build the store's website myself. Open to UGC work with tech brands; the invitation projects below have public demos with fictional data.
+Tech and gadgets content creator, and co-founder and CTO of BaratongoVzla (Valencia, Venezuela). I've made 140+ product videos for the brand (63K TikTok followers, ~300K likes), one of them with 1.3M views, and roughly 3 in 10 of my viewers are in the US. I explain what a product really does, in neutral Latin American Spanish, with humor and no hype. I'm also an Amazon Influencer (@BaratongoVzla) and I build the store's website myself. Open to UGC work with tech brands; the invitation projects below have public demos with fictional data.
 
 </details>
 
@@ -36,7 +36,7 @@ Tech and gadgets content creator, and co-founder and CTO of BaratongoVzla (Valen
 
 <img src="assets/neo/h-02.svg" alt="02 Creador UGC" width="100%"/>
 
-<img src="assets/neo/ugc.svg" alt="Creador de contenido UGC: 144 videos para BaratongoVzla, 1,3 millones de vistas en un solo video y 63 mil seguidores en el TikTok de la marca." width="100%"/>
+<img src="assets/neo/ugc.svg" alt="Creador de contenido UGC: más de 140 videos de producto para BaratongoVzla, 1,3 millones de vistas en un solo video y 63 mil seguidores en el TikTok de la marca." width="100%"/>
 
 Además de construir tiendas, hago contenido en video: reseñas y demos de gadgets, tecnología e IA con humor y datos reales, en español neutro para toda Latinoamérica. ¿Tu marca de tecnología necesita un video que explique el producto de verdad? [Escríbeme por LinkedIn](https://www.linkedin.com/in/jonathan-moreno-03101988/) o por [Instagram](https://www.instagram.com/SoyJohnMoreno).
 

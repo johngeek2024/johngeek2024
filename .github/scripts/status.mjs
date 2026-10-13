@@ -9,7 +9,6 @@ const SITES = [
   { name: 'BaratongoVzla', url: 'https://baratongovzla.com', label: 'baratongovzla.com' },
   { name: 'Broke But Fancy', url: 'https://brokebutfancy.web.app', label: 'brokebutfancy.web.app' },
 ];
-const USER = 'johngeek2024';
 const SLOW_MS = 2500;
 
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
@@ -41,19 +40,7 @@ export async function probe(url) {
 export async function collect() {
   const sites = [];
   for (const s of SITES) sites.push({ ...s, ...(await probe(s.url)) });
-  let gh = { repos: null, followers: null };
-  try {
-    const headers = { 'user-agent': 'johngeek2024-profile-status', accept: 'application/vnd.github+json' };
-    if (process.env.GITHUB_TOKEN) headers.authorization = `Bearer ${process.env.GITHUB_TOKEN}`;
-    const r = await fetch(`https://api.github.com/users/${USER}`, { headers, signal: AbortSignal.timeout(10_000) });
-    if (r.ok) {
-      const j = await r.json();
-      gh = { repos: Number(j.public_repos), followers: Number(j.followers) };
-    }
-  } catch {
-    /* sin datos de GitHub: se muestran guiones */
-  }
-  return { sites, gh, at: new Date() };
+  return { sites, at: new Date() };
 }
 
 const font = (family, file, weight = 400, style = 'normal') =>
@@ -67,11 +54,11 @@ function state(s) {
   return { txt: 'Operativo', c: '#3ddc97' };
 }
 
-export function renderStatus({ sites, gh, at }) {
+export function renderStatus({ sites, at }) {
   const W = 1200;
   const rowH = 96;
   const top = 28;
-  const H = top + sites.length * rowH + 150;
+  const H = top + sites.length * rowH + 52;
   const rows = sites
     .map((s, i) => {
       const y = top + i * rowH;
@@ -93,19 +80,11 @@ export function renderStatus({ sites, gh, at }) {
     .join('\n');
   const y2 = top + sites.length * rowH + 4;
   const stamp = at.toISOString().slice(0, 16).replace('T', ' ') + ' UTC';
-  const n = (v) => (Number.isFinite(v) ? v : '—');
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" role="img" aria-label="Estado en vivo de los sitios de Jonathan Moreno">
 <style>${font('IN', 'in400-ascii.woff2')}${font('IN', 'in600-ascii.woff2', 600)}${font('JB', 'jb400-ascii.woff2')}${font('JB', 'jb700-ascii.woff2', 700)}${font('IS', 'is400-ascii.woff2')}</style>
 <rect width="${W}" height="${H}" rx="22" fill="#070b17"/>
 ${rows}
-<g transform="translate(0 ${y2})">
-  <line x1="40" y1="14" x2="1160" y2="14" stroke="#1f2a4a"/>
-  <text x="40" y="52" font-family="JB,monospace" font-size="15" letter-spacing="2" fill="#8b96b0">CUENTA PUBLICA</text>
-  <text x="40" y="100" font-family="IS,serif" font-size="46" fill="#e9edf7">${n(gh.repos)}<tspan font-family="IN,sans-serif" font-size="17" fill="#8b96b0" dx="8">repos públicos</tspan></text>
-  <text x="330" y="100" font-family="IS,serif" font-size="46" fill="#e9edf7">${n(gh.followers)}<tspan font-family="IN,sans-serif" font-size="17" fill="#8b96b0" dx="8">seguidores</tspan></text>
-  <text x="1160" y="52" text-anchor="end" font-family="JB,monospace" font-size="15" letter-spacing="2" fill="#8b96b0">MEDIDO ${esc(stamp)}</text>
-  <text x="1160" y="76" text-anchor="end" font-family="JB,monospace" font-size="15" fill="#5d6a8a">desde GitHub Actions · se actualiza cada 6 h</text>
-</g>
+<text x="1160" y="${y2 + 22}" text-anchor="end" font-family="JB,monospace" font-size="13" fill="#5d6a8a">medido ${esc(stamp)} desde GitHub Actions · se actualiza cada 6 h</text>
 </svg>`;
 }
 

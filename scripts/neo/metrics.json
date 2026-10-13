@@ -2,17 +2,100 @@
   "updated": "2026-10-12",
   "source": "TikTok Studio e Instagram Insights de las cuentas de BaratongoVzla",
   "videos": 70,
-  "tiktok": { "followers": 63100, "likes": 298700 },
-  "instagram": { "followers": 16000, "posts": 745 },
+  "tiktok": {
+    "followers": 63100,
+    "likes": 298700
+  },
+  "instagram": {
+    "followers": 16000,
+    "posts": 745,
+    "top90": 74200,
+    "note": "Insights solo muestra 90 días; el reel del proyector queda fuera de la ventana pero también llegó lejos (cifra pendiente)"
+  },
   "top": [
-    { "title": "El proyector que convirtió mi techo en un cine 4K", "date": "30 abr 2026", "views": 1300000, "likes": 55000, "comments": 14000, "shares": 22000, "saves": 15000, "newFollowers": 13000, "avgWatch": 14.17, "completion": 15.7 },
-    { "title": "La mini soldadora de bolsillo", "date": "4 nov 2025", "views": 767000, "likes": 19000, "comments": 3321, "shares": 7755, "saves": 2924, "newFollowers": 5100, "avgWatch": 14.83, "completion": 16.4 },
-    { "title": "La cámara WiFi 2K, el «Chismoso 3000»", "date": "28 oct 2025", "views": 624000, "likes": 20000, "comments": 5183, "shares": 11000, "saves": 5701, "newFollowers": 7000, "avgWatch": 16.68, "completion": 13.5 }
+    {
+      "title": "El proyector que convirtió mi techo en un cine 4K",
+      "date": "30 abr 2026",
+      "views": 1300000,
+      "likes": 55000,
+      "comments": 14000,
+      "shares": 22000,
+      "saves": 15000,
+      "newFollowers": 13000,
+      "avgWatch": 14.17,
+      "completion": 15.7
+    },
+    {
+      "title": "La mini soldadora de bolsillo",
+      "date": "4 nov 2025",
+      "views": 767000,
+      "likes": 19000,
+      "comments": 3321,
+      "shares": 7755,
+      "saves": 2924,
+      "newFollowers": 5100,
+      "avgWatch": 14.83,
+      "completion": 16.4
+    },
+    {
+      "title": "La cámara WiFi 2K, el «Chismoso 3000»",
+      "date": "28 oct 2025",
+      "views": 624000,
+      "likes": 20000,
+      "comments": 5183,
+      "shares": 11000,
+      "saves": 5701,
+      "newFollowers": 7000,
+      "avgWatch": 16.68,
+      "completion": 13.5
+    }
   ],
   "audience": {
     "basis": "promedio simple de los 3 videos más vistos",
-    "countries": [["Venezuela", 55.9], ["EE. UU.", 29.2], ["España", 3.1], ["Perú", 3.0], ["Costa Rica", 1.4]],
-    "ages": [["18-24", 7.7], ["25-34", 19.3], ["35-44", 26.3], ["45-54", 27.0], ["55+", 19.7]],
+    "countries": [
+      [
+        "Venezuela",
+        55.9
+      ],
+      [
+        "EE. UU.",
+        29.2
+      ],
+      [
+        "España",
+        3.1
+      ],
+      [
+        "Perú",
+        3
+      ],
+      [
+        "Costa Rica",
+        1.4
+      ]
+    ],
+    "ages": [
+      [
+        "18-24",
+        7.7
+      ],
+      [
+        "25-34",
+        19.3
+      ],
+      [
+        "35-44",
+        26.3
+      ],
+      [
+        "45-54",
+        27
+      ],
+      [
+        "55+",
+        19.7
+      ]
+    ],
     "nonFollowers": "98-99 %"
   }
 }

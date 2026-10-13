@@ -471,7 +471,7 @@ function footer() {
 // ───────────────────────── main ─────────────────────────
 const PROJECTS = [
   { file: 'card-tiktok', code: 'TT', tag: 'LIVE', kind: 'CONTENIDO · TIKTOK', name: 'TikTok de BaratongoVzla', desc: '63K seguidores, 299K me gusta y un video de gadgets con 1,3M de vistas.', cta: '@baratongovzla', glow: C.mag },
-  { file: 'card-instagram', code: 'IG', tag: 'LIVE', kind: 'CONTENIDO · INSTAGRAM', name: 'Instagram de BaratongoVzla', desc: '16K seguidores y más de 745 publicaciones de producto, reels y clientes.', cta: '@baratongovzla', glow: C.cyan },
+  { file: 'card-instagram', code: 'IG', tag: 'LIVE', kind: 'CONTENIDO · INSTAGRAM', name: 'Instagram de BaratongoVzla', desc: `${num(M.instagram.followers, 0)} seguidores, ${M.instagram.posts} publicaciones y un reel de ${num(M.instagram.top90)} vistas en 90 días.`, cta: '@baratongovzla', glow: C.cyan },
   { file: 'card-baratongovzla', code: 'BVZ', tag: 'LIVE', kind: 'TIENDA · BLOG · PANEL', name: 'BaratongoVzla', desc: 'Tecnología y gadgets desde Valencia. Carrito, combos, Pago Móvil, Binance Pay y pedido por WhatsApp.', cta: 'baratongovzla.com', glow: C.cyan },
   { file: 'card-brokebutfancy', code: 'BBF', tag: 'LIVE', kind: 'AFILIADOS', name: 'Broke But Fancy', desc: 'Sitio de afiliados con lo mejor de tech y hogar.', cta: 'brokebutfancy.web.app', glow: C.mag },
   { file: 'card-boda', code: 'BODA', tag: 'DEMO', kind: 'INVITACIÓN', name: 'Boda bilingüe', desc: 'Sello de lacre, cuenta regresiva y confirmación de invitados.', cta: 'Ver demo (datos ficticios)', glow: '#A78BFA' },

@@ -313,7 +313,7 @@ function modules() {
     ['MOD_02', 'Gancho en 3 segundos', 'Si no te atrapa antes del segundo 3, el video vuelve a empezar.'],
     ['MOD_03', 'Sin humo', 'Lo que el producto hace de verdad, no lo que promete la caja.'],
     ['MOD_04', 'Español para todos', 'Neutro, de México a Argentina. Los chistes viajan bien.'],
-    ['MOD_05', 'Marca propia', 'Cofundador de BaratongoVzla: más de 70 videos y 60K+ en TikTok.'],
+    ['MOD_05', 'Marca propia', 'Cofundador de BaratongoVzla: 144 videos y 63K en TikTok.'],
     ['MOD_06', 'Y sí, también programo', 'La tienda y el panel los armo yo. Si algo falla, fue el caché.'],
   ];
   const W = 900, cw = 292, ch = 118, g = 12;
@@ -374,7 +374,7 @@ const fecha = new Date(M.updated + 'T12:00:00').toLocaleDateString('es-VE', { da
 function ugc() {
   const W = 900, H = 278;
   const tiles = [
-    [M.videos + '+', 'VIDEOS PARA BARATONGOVZLA', C.cyan],
+    [String(M.videos), 'VIDEOS PARA BARATONGOVZLA', C.cyan],
     [num(M.top[0].views), 'VISTAS EN UN SOLO VIDEO', C.mag],
     [num(M.tiktok.followers), 'SEGUIDORES EN TIKTOK DE LA MARCA', C.cyan],
   ];
@@ -401,7 +401,7 @@ function ugc() {
 <text x="0" y="224" font-size="12" fill="${C.soft}">En mis 3 videos más vistos, ${esc(M.audience.nonFollowers)} del alcance fue gente que aún no seguía la cuenta.</text>
 <text x="0" y="242" font-size="12" fill="${C.soft}">Videos de producto que explican lo que el gadget hace de verdad: lo cuenta alguien que programa la tienda y la vende.</text>
 <text x="0" y="266" font-size="11" fill="${C.mute}">// cifras de mi marca (BaratongoVzla), no de trabajos para terceros · datos al ${esc(fecha)}<tspan class="blink" fill="${C.cyan}"> █</tspan></text>`;
-  return svg(W, H, `Creador de contenido UGC: más de ${M.videos} videos para BaratongoVzla, ${num(M.top[0].views)} de vistas en un solo video y ${num(M.tiktok.followers)} seguidores en el TikTok de la marca.`, body);
+  return svg(W, H, `Creador de contenido UGC: ${M.videos} videos para BaratongoVzla, ${num(M.top[0].views)} de vistas en un solo video y ${num(M.tiktok.followers)} seguidores en el TikTok de la marca.`, body);
 }
 
 // ───────────────────────── videos que han funcionado ─────────────────────────

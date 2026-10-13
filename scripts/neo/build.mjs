@@ -357,6 +357,38 @@ ${lines.map((l, k) => `<text x="18" y="${274 + k * 18}" font-size="12" fill="${C
 <text x="18" y="346" font-size="12" fill="${C.cyan}">${esc(p.cta)} ↗</text>`);
 }
 
+// ───────────────────────── creador de contenido (UGC) ─────────────────────────
+function ugc() {
+  const W = 900, H = 236;
+  const tiles = [
+    ['70+', 'VIDEOS PARA BARATONGOVZLA', C.cyan],
+    ['1,3M', 'VISTAS EN UN SOLO VIDEO', C.mag],
+    ['60K+', 'SEGUIDORES EN TIKTOK DE LA MARCA', C.cyan],
+  ];
+  const tw = 292, g = 12;
+  let body = '';
+  tiles.forEach(([n, l, c], i) => {
+    const x = i * (tw + g);
+    body += `<rect x="${x + 0.5}" y="0.5" width="${tw - 1}" height="118" fill="#0A101C" stroke="${c}" stroke-opacity=".4"/>
+<path d="M${x} 14V0H${x + 14}" fill="none" stroke="${c}" stroke-width="2"/>
+<text x="${x + 18}" y="68" class="d" font-size="50" fill="${C.white}">${esc(n)}</text>
+<text x="${x + 18}" y="96" font-size="10" letter-spacing="2" fill="${c}">${esc(l)}</text>`;
+  });
+  const chips = ['UGC DE TECNOLOGÍA Y GADGETS', 'GUION + GRABACIÓN + EDICIÓN', 'ESPAÑOL NEUTRO LATAM', 'EXPLICACIÓN TÉCNICA CLARA'];
+  let cx = 0;
+  let chipSvg = '';
+  for (const t of chips) {
+    const w = mw(t, 11) + 24;
+    chipSvg += `<rect x="${cx + 0.5}" y="146.5" width="${w}" height="28" fill="none" stroke="${C.cyan}" stroke-opacity=".45"/>
+<text x="${cx + 12}" y="165" font-size="11" fill="${C.cyan}">${esc(t)}</text>`;
+    cx += w + 10;
+  }
+  body += chipSvg + `
+<text x="0" y="208" font-size="12" fill="${C.soft}">Videos de producto que explican lo que el gadget hace de verdad: lo cuenta alguien que programa la tienda y la vende.</text>
+<text x="0" y="226" font-size="12" fill="${C.mute}">// resultados de mi marca (BaratongoVzla), no de trabajos para terceros<tspan class="blink" fill="${C.cyan}"> █</tspan></text>`;
+  return svg(W, H, 'Creador de contenido UGC: más de 70 videos para BaratongoVzla, 1,3 millones de vistas en un solo video y más de 60 mil seguidores en el TikTok de la marca.', body);
+}
+
 // ───────────────────────── pie ─────────────────────────
 function footer() {
   return svg(900, 60, 'Gracias por pasar. Si algo falla, fue el caché.', `
@@ -385,7 +417,9 @@ const files = {
   'social-linkedin.svg': social('LinkedIn', 'Jonathan Moreno', C.mag),
   'h-01.svg': header('01', 'SOBRE MÍ'),
   'h-02.svg': header('02', 'PROYECTOS'),
-  'h-03.svg': header('03', 'EN VIVO'),
+  'h-03.svg': header('03', 'CREADOR UGC'),
+  'h-04.svg': header('04', 'EN VIVO'),
+  'ugc.svg': ugc(),
   'modules.svg': modules(),
   'footer.svg': footer(),
 };

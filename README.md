@@ -45,7 +45,15 @@ Co-founder and CTO at BaratongoVzla (Valencia, Venezuela). I build e-commerce si
 
 <br/>
 
-<img src="assets/neo/h-03.svg" alt="03 En vivo" width="100%"/>
+<img src="assets/neo/h-03.svg" alt="03 Creador UGC" width="100%"/>
+
+<img src="assets/neo/ugc.svg" alt="Creador de contenido UGC: más de 70 videos para BaratongoVzla, 1,3 millones de vistas en un solo video y más de 60 mil seguidores en el TikTok de la marca." width="100%"/>
+
+Además de construir tiendas, hago contenido en video: reseñas y demos de gadgets, tecnología e IA con humor y datos reales, en español neutro para toda Latinoamérica. ¿Tu marca de tecnología necesita un video que explique el producto de verdad? [Escríbeme por LinkedIn](https://www.linkedin.com/in/jonathan-moreno-03101988/) o por [Instagram](https://www.instagram.com/SoyJohnMoreno).
+
+<br/>
+
+<img src="assets/neo/h-04.svg" alt="04 En vivo" width="100%"/>
 
 <div align="center">
 <img src="https://raw.githubusercontent.com/johngeek2024/johngeek2024/output/status.svg" alt="Estado en vivo de BaratongoVzla y Broke But Fancy" width="100%"/>

@@ -15,7 +15,7 @@
 
 **Hago videos que venden gadgets. Lo demás es consecuencia.**
 
-Soy John Moreno, creador de contenido de tecnología y cofundador de [BaratongoVzla](https://baratongovzla.com), en Valencia, Venezuela. Llevo más de 70 videos de producto y uno de ellos, el del proyector que convirtió mi techo en un cine 4K, pasó de 1,3 millones de vistas. Eso se explica con un buen producto, un gancho de tres segundos y gente a la que le encanta ver un techo convertido en cine.
+Soy John Moreno, creador de contenido de tecnología y cofundador de [BaratongoVzla](https://baratongovzla.com), en Valencia, Venezuela. Llevo más de 70 videos de producto para la marca, que ya suma 63 mil seguidores y casi 300 mil me gusta en TikTok. Uno de ellos, el del proyector que convirtió mi techo en un cine 4K, pasó de 1,3 millones de vistas. Eso se explica con un buen producto, un gancho de tres segundos y gente a la que le encanta ver un techo convertido en cine.
 
 Mi método es simple: cuento lo que el producto hace de verdad, sin humo, y con el humor justo para que veas el video completo. Un video aburrido es un anuncio que nadie pidió.
 
@@ -28,36 +28,66 @@ Si eres una marca de tecnología, puedo hacerte el video que tu producto merece.
 
 <br/>
 
-Tech and gadgets content creator, and co-founder and CTO of BaratongoVzla (Valencia, Venezuela). I've made 70+ product videos, one of them with 1.3M views. I explain what a product really does, in neutral Latin American Spanish, with humor and no hype. I'm also an Amazon Influencer (@BaratongoVzla) and I build the store's website myself. Open to UGC work with tech brands; the invitation projects below have public demos with fictional data.
+Tech and gadgets content creator, and co-founder and CTO of BaratongoVzla (Valencia, Venezuela). I've made 70+ product videos for the brand (63K TikTok followers, ~300K likes), one of them with 1.3M views, and roughly 3 in 10 of my viewers are in the US. I explain what a product really does, in neutral Latin American Spanish, with humor and no hype. I'm also an Amazon Influencer (@BaratongoVzla) and I build the store's website myself. Open to UGC work with tech brands; the invitation projects below have public demos with fictional data.
 
 </details>
 
 <br/>
 
-<img src="assets/neo/h-02.svg" alt="02 Proyectos" width="100%"/>
+<img src="assets/neo/h-02.svg" alt="02 Creador UGC" width="100%"/>
 
-<p align="center">
-<a href="https://baratongovzla.com"><img src="assets/neo/card-baratongovzla.svg" width="49%" alt="BaratongoVzla: tienda, blog y panel"/></a>
-<a href="https://brokebutfancy.web.app"><img src="assets/neo/card-brokebutfancy.svg" width="49%" alt="Broke But Fancy: sitio de afiliados"/></a>
-</p>
-<p align="center">
-<a href="https://johngeek2024.github.io/demo-boda/"><img src="assets/neo/card-boda.svg" width="49%" alt="Invitación de boda bilingüe, demo con datos ficticios"/></a>
-<a href="https://johngeek2024.github.io/demo-15/"><img src="assets/neo/card-quince.svg" width="49%" alt="Invitación de 15 años, demo con datos ficticios"/></a>
-</p>
-
-<div align="center"><sub>Las invitaciones son demos con datos ficticios, no los sitios reales. El código es privado.</sub></div>
-
-<br/>
-
-<img src="assets/neo/h-03.svg" alt="03 Creador UGC" width="100%"/>
-
-<img src="assets/neo/ugc.svg" alt="Creador de contenido UGC: más de 70 videos para BaratongoVzla, 1,3 millones de vistas en un solo video y más de 60 mil seguidores en el TikTok de la marca." width="100%"/>
+<img src="assets/neo/ugc.svg" alt="Creador de contenido UGC: más de 70 videos para BaratongoVzla, 1,3 millones de vistas en un solo video y 63 mil seguidores en el TikTok de la marca." width="100%"/>
 
 Además de construir tiendas, hago contenido en video: reseñas y demos de gadgets, tecnología e IA con humor y datos reales, en español neutro para toda Latinoamérica. ¿Tu marca de tecnología necesita un video que explique el producto de verdad? [Escríbeme por LinkedIn](https://www.linkedin.com/in/jonathan-moreno-03101988/) o por [Instagram](https://www.instagram.com/SoyJohnMoreno).
 
 <br/>
 
-<img src="assets/neo/h-04.svg" alt="04 En vivo" width="100%"/>
+<img src="assets/neo/h-03.svg" alt="03 Lo que funciona" width="100%"/>
+
+<img src="assets/neo/videos.svg" alt="Mis tres videos más vistos en TikTok: el proyector que convirtió mi techo en un cine 4K con 1,3 millones de vistas, la mini soldadora de bolsillo con 767 mil y la cámara WiFi 2K con 624 mil." width="100%"/>
+
+<br/>
+
+<img src="assets/neo/h-04.svg" alt="04 Audiencia" width="100%"/>
+
+<img src="assets/neo/audience.svg" alt="Audiencia de mis tres videos más vistos: Venezuela 56%, Estados Unidos 29%, España 3%, Perú 3% y Costa Rica 1%. La mayoría tiene entre 35 y 54 años." width="100%"/>
+
+<br/>
+
+<img src="assets/neo/h-05.svg" alt="05 Proyectos" width="100%"/>
+
+<table>
+<tr>
+<td width="50%" valign="top" align="center">
+<a href="https://www.tiktok.com/@baratongovzla"><img src="assets/neo/card-tiktok.svg" alt="TikTok de BaratongoVzla" width="100%"/></a>
+</td>
+<td width="50%" valign="top" align="center">
+<a href="https://www.instagram.com/baratongovzla/"><img src="assets/neo/card-instagram.svg" alt="Instagram de BaratongoVzla" width="100%"/></a>
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top" align="center">
+<a href="https://baratongovzla.com"><img src="assets/neo/card-baratongovzla.svg" alt="BaratongoVzla: tienda, blog y panel" width="100%"/></a>
+</td>
+<td width="50%" valign="top" align="center">
+<a href="https://brokebutfancy.web.app"><img src="assets/neo/card-brokebutfancy.svg" alt="Broke But Fancy: sitio de afiliados" width="100%"/></a>
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top" align="center">
+<a href="https://johngeek2024.github.io/demo-boda/"><img src="assets/neo/card-boda.svg" alt="Invitación de boda bilingüe, demo con datos ficticios" width="100%"/></a>
+</td>
+<td width="50%" valign="top" align="center">
+<a href="https://johngeek2024.github.io/demo-15/"><img src="assets/neo/card-quince.svg" alt="Invitación de 15 años, demo con datos ficticios" width="100%"/></a>
+</td>
+</tr>
+</table>
+
+<div align="center"><sub>Las cifras son de las cuentas de mi marca, BaratongoVzla. Las invitaciones son demos con datos ficticios, no los sitios reales. El código es privado.</sub></div>
+
+<br/>
+
+<img src="assets/neo/h-06.svg" alt="06 En vivo" width="100%"/>
 
 <div align="center">
 <img src="https://raw.githubusercontent.com/johngeek2024/johngeek2024/output/status.svg" alt="Estado en vivo de BaratongoVzla y Broke But Fancy" width="100%"/>

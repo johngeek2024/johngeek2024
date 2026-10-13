@@ -153,13 +153,13 @@ async function hero(stats) {
     ['r', 'Kernel', 'Chief Tinkering Officer'],
     ['r', 'IDE', 'VS Code + Claude Code'],
     ['r', 'Shell', 'café → código → deploy'],
-    ['h', 'DEV', 'STACK', C.mag],
-    ['r', 'Lang', 'TypeScript · JavaScript'],
-    ['r', 'Frontend', 'Astro · Next.js · React · Angular'],
-    ['r', 'Styling', 'Tailwind CSS v4 · Vite'],
-    ['r', 'Backend', 'Node · Express · Firebase'],
-    ['r', 'Infra', 'Vercel · Cloudflare · Actions'],
-    ['r', 'Sites', 'ES · EN · 中文'],
+    ['h', 'CRE', 'CONTENIDO', C.mag],
+    ['r', 'Nicho', 'Gadgets · Tecnología · IA'],
+    ['r', 'Formato', 'Video corto vertical'],
+    ['r', 'Top video', `${num(M.top[0].views)} vistas · ${num(M.top[0].likes)} likes`],
+    ['r', 'Alcance', `${num(M.tiktok.followers, 0)} seguidores · ${num(M.tiktok.likes)} likes`],
+    ['r', 'Idioma', 'Español neutro LATAM'],
+    ['r', 'Código', 'Astro · Next.js · TypeScript'],
     ['h', 'NET', 'CONTACTO', C.cyan],
     ['r', 'Web', 'baratongovzla.com'],
     ['r', 'Social', '@SoyJohnMoreno'],
@@ -357,13 +357,26 @@ ${lines.map((l, k) => `<text x="18" y="${274 + k * 18}" font-size="12" fill="${C
 <text x="18" y="346" font-size="12" fill="${C.cyan}">${esc(p.cta)} ↗</text>`);
 }
 
+// ───────────────────────── datos de contenido (metrics.json) ─────────────────────────
+// Para actualizar cifras: editar scripts/neo/metrics.json. El Action diario regenera los SVG.
+const M = JSON.parse(await readFile(join(HERE, 'metrics.json'), 'utf8'));
+const num = (n, d = 1) => {
+  const f = (v) => v.toFixed(d).replace(/\.0+$/, '').replace('.', ',');
+  if (n >= 1e6) return f(n / 1e6) + 'M';
+  if (n >= 1e5) return Math.round(n / 1e3) + 'K';
+  if (n >= 1e3) return f(n / 1e3) + 'K';
+  return String(n);
+};
+const pct = (v) => String(v.toFixed(1)).replace('.', ',') + '%';
+const fecha = new Date(M.updated + 'T12:00:00').toLocaleDateString('es-VE', { day: '2-digit', month: 'short', year: 'numeric' });
+
 // ───────────────────────── creador de contenido (UGC) ─────────────────────────
 function ugc() {
-  const W = 900, H = 236;
+  const W = 900, H = 278;
   const tiles = [
-    ['70+', 'VIDEOS PARA BARATONGOVZLA', C.cyan],
-    ['1,3M', 'VISTAS EN UN SOLO VIDEO', C.mag],
-    ['60K+', 'SEGUIDORES EN TIKTOK DE LA MARCA', C.cyan],
+    [M.videos + '+', 'VIDEOS PARA BARATONGOVZLA', C.cyan],
+    [num(M.top[0].views), 'VISTAS EN UN SOLO VIDEO', C.mag],
+    [num(M.tiktok.followers), 'SEGUIDORES EN TIKTOK DE LA MARCA', C.cyan],
   ];
   const tw = 292, g = 12;
   let body = '';
@@ -384,9 +397,67 @@ function ugc() {
     cx += w + 10;
   }
   body += chipSvg + `
-<text x="0" y="208" font-size="12" fill="${C.soft}">Videos de producto que explican lo que el gadget hace de verdad: lo cuenta alguien que programa la tienda y la vende.</text>
-<text x="0" y="226" font-size="12" fill="${C.mute}">// resultados de mi marca (BaratongoVzla), no de trabajos para terceros<tspan class="blink" fill="${C.cyan}"> █</tspan></text>`;
-  return svg(W, H, 'Creador de contenido UGC: más de 70 videos para BaratongoVzla, 1,3 millones de vistas en un solo video y más de 60 mil seguidores en el TikTok de la marca.', body);
+<text x="0" y="206" font-size="12" fill="${C.soft}">${num(M.tiktok.likes)} me gusta en TikTok y ${num(M.instagram.followers)} seguidores en Instagram con la marca.</text>
+<text x="0" y="224" font-size="12" fill="${C.soft}">En mis 3 videos más vistos, ${esc(M.audience.nonFollowers)} del alcance fue gente que aún no seguía la cuenta.</text>
+<text x="0" y="242" font-size="12" fill="${C.soft}">Videos de producto que explican lo que el gadget hace de verdad: lo cuenta alguien que programa la tienda y la vende.</text>
+<text x="0" y="266" font-size="11" fill="${C.mute}">// cifras de mi marca (BaratongoVzla), no de trabajos para terceros · datos al ${esc(fecha)}<tspan class="blink" fill="${C.cyan}"> █</tspan></text>`;
+  return svg(W, H, `Creador de contenido UGC: más de ${M.videos} videos para BaratongoVzla, ${num(M.top[0].views)} de vistas en un solo video y ${num(M.tiktok.followers)} seguidores en el TikTok de la marca.`, body);
+}
+
+// ───────────────────────── videos que han funcionado ─────────────────────────
+function videos() {
+  const W = 900, cw = 292, ch = 300, g = 12;
+  let body = '';
+  M.top.forEach((v, i) => {
+    const x = i * (cw + g);
+    const c = i % 2 ? C.mag : C.cyan;
+    const lines = wrap(v.title, 30).slice(0, 2);
+    const stats = [
+      ['ME GUSTA', num(v.likes)],
+      ['COMENTARIOS', num(v.comments)],
+      ['COMPARTIDOS', num(v.shares)],
+      ['GUARDADOS', num(v.saves)],
+    ];
+    body += `<rect x="${x + 0.5}" y="0.5" width="${cw - 1}" height="${ch - 1}" fill="#0A101C" stroke="${c}" stroke-opacity=".4"/>
+<path d="M${x} 14V0H${x + 14}" fill="none" stroke="${c}" stroke-width="2"/>
+<text x="${x + 18}" y="30" font-size="10" letter-spacing="3" fill="${c}">#${i + 1} · ${esc(v.date.toUpperCase())}</text>
+<text x="${x + 18}" y="88" class="d" font-size="56" fill="${C.white}">${esc(num(v.views))}</text>
+<text x="${x + 18 + dw(num(v.views), 56) + 8}" y="88" font-size="11" letter-spacing="2" fill="${C.mute}">VISTAS</text>
+${lines.map((l, k) => `<text x="${x + 18}" y="${116 + k * 18}" class="d" font-size="14" fill="${C.white}">${esc(l)}</text>`).join('')}
+<line x1="${x + 18}" y1="158" x2="${x + cw - 18}" y2="158" stroke="${C.line}"/>
+${stats.map(([k, val], j) => {
+  const cx = x + 18 + (j % 2) * 130, cy = 184 + Math.floor(j / 2) * 40;
+  return `<text x="${cx}" y="${cy}" font-size="9" letter-spacing="2" fill="${C.mute}">${k}</text><text x="${cx}" y="${cy + 18}" class="d" font-size="17" fill="${C.cyan}">${esc(val)}</text>`;
+}).join('')}
+<line x1="${x + 18}" y1="258" x2="${x + cw - 18}" y2="258" stroke="${C.line}"/>
+<text x="${x + 18}" y="280" font-size="10.5" fill="${C.green}">+${esc(num(v.newFollowers))} seguidores</text>
+<text x="${x + cw - 18}" y="280" font-size="10.5" fill="${C.soft}" text-anchor="end">${esc(pct(v.completion))} completo</text>`;
+  });
+  return svg(W, ch, 'Mis tres videos más vistos en TikTok: ' + M.top.map((v) => `${v.title}, ${num(v.views)} vistas`).join('; '), body);
+}
+
+// ───────────────────────── audiencia ─────────────────────────
+function audience() {
+  const W = 900, H = 258;
+  const bars = (title, rows, x, c) => {
+    const bw = 270;
+    let o = `<text x="${x}" y="22" font-size="10" letter-spacing="3" fill="${C.mag}">${title}</text>`;
+    const max = Math.max(...rows.map((r) => r[1]));
+    rows.forEach(([k, v], i) => {
+      const y = 46 + i * 34;
+      const w = Math.max(3, Math.round((v / max) * bw));
+      o += `<text x="${x}" y="${y}" font-size="12" fill="${C.text}">${esc(k)}</text>
+<rect x="${x + 96}" y="${y - 10}" width="${bw}" height="10" fill="${C.line}" fill-opacity=".45"/>
+<rect x="${x + 96}" y="${y - 10}" width="${w}" height="10" fill="${c}"/>
+<text x="${x + 96 + bw + 10}" y="${y}" font-size="12" fill="${C.soft}">${esc(pct(v))}</text>`;
+    });
+    return o;
+  };
+  let body = bars('DÓNDE ESTÁN', M.audience.countries, 0, C.cyan) + bars('QUÉ EDAD TIENEN', M.audience.ages, 470, C.cyan);
+  const adults = M.audience.ages[2][1] + M.audience.ages[3][1];
+  body += `<line x1="0" y1="226.5" x2="${W}" y2="226.5" stroke="${C.line}"/>
+<text x="0" y="248" font-size="11" fill="${C.soft}">${esc(pct(adults))} tiene entre 35 y 54 años y casi 3 de cada 10 vive en EE. UU.: español que también llega al mercado hispano de allá.</text>`;
+  return svg(W, H, `Audiencia de mis tres videos más vistos: ${M.audience.countries.map((c) => c[0] + ' ' + pct(c[1])).join(', ')}.`, body);
 }
 
 // ───────────────────────── pie ─────────────────────────
@@ -399,6 +470,8 @@ function footer() {
 
 // ───────────────────────── main ─────────────────────────
 const PROJECTS = [
+  { file: 'card-tiktok', code: 'TT', tag: 'LIVE', kind: 'CONTENIDO · TIKTOK', name: 'TikTok de BaratongoVzla', desc: '63K seguidores, 299K me gusta y un video de gadgets con 1,3M de vistas.', cta: '@baratongovzla', glow: C.mag },
+  { file: 'card-instagram', code: 'IG', tag: 'LIVE', kind: 'CONTENIDO · INSTAGRAM', name: 'Instagram de BaratongoVzla', desc: '16K seguidores y más de 745 publicaciones de producto, reels y clientes.', cta: '@baratongovzla', glow: C.cyan },
   { file: 'card-baratongovzla', code: 'BVZ', tag: 'LIVE', kind: 'TIENDA · BLOG · PANEL', name: 'BaratongoVzla', desc: 'Tecnología y gadgets desde Valencia. Carrito, combos, Pago Móvil, Binance Pay y pedido por WhatsApp.', cta: 'baratongovzla.com', glow: C.cyan },
   { file: 'card-brokebutfancy', code: 'BBF', tag: 'LIVE', kind: 'AFILIADOS', name: 'Broke But Fancy', desc: 'Sitio de afiliados con lo mejor de tech y hogar.', cta: 'brokebutfancy.web.app', glow: C.mag },
   { file: 'card-boda', code: 'BODA', tag: 'DEMO', kind: 'INVITACIÓN', name: 'Boda bilingüe', desc: 'Sello de lacre, cuenta regresiva y confirmación de invitados.', cta: 'Ver demo (datos ficticios)', glow: '#A78BFA' },
@@ -416,10 +489,14 @@ const files = {
   'social-youtube.svg': social('YouTube', '@SoyJohnMoreno', C.mag),
   'social-linkedin.svg': social('LinkedIn', 'Jonathan Moreno', C.mag),
   'h-01.svg': header('01', 'SOBRE MÍ'),
-  'h-02.svg': header('02', 'PROYECTOS'),
-  'h-03.svg': header('03', 'CREADOR UGC'),
-  'h-04.svg': header('04', 'EN VIVO'),
+  'h-02.svg': header('02', 'CREADOR UGC'),
+  'h-03.svg': header('03', 'LO QUE FUNCIONA'),
+  'h-04.svg': header('04', 'AUDIENCIA'),
+  'h-05.svg': header('05', 'PROYECTOS'),
+  'h-06.svg': header('06', 'EN VIVO'),
   'ugc.svg': ugc(),
+  'videos.svg': videos(),
+  'audience.svg': audience(),
   'modules.svg': modules(),
   'footer.svg': footer(),
 };

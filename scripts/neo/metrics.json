@@ -10,7 +10,16 @@
     "followers": 16000,
     "posts": 745,
     "top90": 74200,
-    "note": "Insights solo muestra 90 días; el reel del proyector queda fuera de la ventana pero también llegó lejos (cifra pendiente)"
+    "note": "Insights solo muestra 90 días en la lista; el reel del proyector se consultó por separado.",
+    "projector": {
+      "views": 143186,
+      "likes": 5117,
+      "comments": 4238,
+      "saves": 1436,
+      "shares": 1897,
+      "interactions": 12866,
+      "nonFollowers": 96.6
+    }
   },
   "top": [
     {

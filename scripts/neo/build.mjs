@@ -406,7 +406,7 @@ function ugc() {
 
 // ───────────────────────── videos que han funcionado ─────────────────────────
 function videos() {
-  const W = 900, cw = 292, ch = 300, g = 12;
+  const W = 900, cw = 292, ch = 300, g = 12, H = 330;
   let body = '';
   M.top.forEach((v, i) => {
     const x = i * (cw + g);
@@ -433,7 +433,8 @@ ${stats.map(([k, val], j) => {
 <text x="${x + 18}" y="280" font-size="10.5" fill="${C.green}">+${esc(num(v.newFollowers))} seguidores</text>
 <text x="${x + cw - 18}" y="280" font-size="10.5" fill="${C.soft}" text-anchor="end">${esc(pct(v.completion))} completo</text>`;
   });
-  return svg(W, ch, 'Mis tres videos más vistos en TikTok: ' + M.top.map((v) => `${v.title}, ${num(v.views)} vistas`).join('; '), body);
+  body += `<text x="0" y="324" font-size="11" fill="${C.soft}">El mismo proyector en Instagram: ${esc(num(M.instagram.projector.views))} vistas · ${esc(num(M.instagram.projector.likes))} me gusta · ${esc(num(M.instagram.projector.comments))} comentarios · ${esc(String(M.instagram.projector.nonFollowers).replace('.', ','))}% de gente que no seguía la cuenta.</text>`;
+  return svg(W, H, 'Mis tres videos más vistos en TikTok: ' + M.top.map((v) => `${v.title}, ${num(v.views)} vistas`).join('; '), body);
 }
 
 // ───────────────────────── audiencia ─────────────────────────
@@ -471,7 +472,7 @@ function footer() {
 // ───────────────────────── main ─────────────────────────
 const PROJECTS = [
   { file: 'card-tiktok', code: 'TT', tag: 'LIVE', kind: 'CONTENIDO · TIKTOK', name: 'TikTok de BaratongoVzla', desc: '63K seguidores, 299K me gusta y un video de gadgets con 1,3M de vistas.', cta: '@baratongovzla', glow: C.mag },
-  { file: 'card-instagram', code: 'IG', tag: 'LIVE', kind: 'CONTENIDO · INSTAGRAM', name: 'Instagram de BaratongoVzla', desc: `${num(M.instagram.followers, 0)} seguidores, ${M.instagram.posts} publicaciones y un reel de ${num(M.instagram.top90)} vistas en 90 días.`, cta: '@baratongovzla', glow: C.cyan },
+  { file: 'card-instagram', code: 'IG', tag: 'LIVE', kind: 'CONTENIDO · INSTAGRAM', name: 'Instagram de BaratongoVzla', desc: `${num(M.instagram.followers, 0)} seguidores, ${M.instagram.posts} publicaciones y el reel del proyector con ${num(M.instagram.projector.views)} vistas.`, cta: '@baratongovzla', glow: C.cyan },
   { file: 'card-baratongovzla', code: 'BVZ', tag: 'LIVE', kind: 'TIENDA · BLOG · PANEL', name: 'BaratongoVzla', desc: 'Tecnología y gadgets desde Valencia. Carrito, combos, Pago Móvil, Binance Pay y pedido por WhatsApp.', cta: 'baratongovzla.com', glow: C.cyan },
   { file: 'card-brokebutfancy', code: 'BBF', tag: 'LIVE', kind: 'AFILIADOS', name: 'Broke But Fancy', desc: 'Sitio de afiliados con lo mejor de tech y hogar.', cta: 'brokebutfancy.web.app', glow: C.mag },
   { file: 'card-boda', code: 'BODA', tag: 'DEMO', kind: 'INVITACIÓN', name: 'Boda bilingüe', desc: 'Sello de lacre, cuenta regresiva y confirmación de invitados.', cta: 'Ver demo (datos ficticios)', glow: '#A78BFA' },

@@ -148,7 +148,7 @@ async function hero(stats) {
   const rows = [
     ['h', 'SYS', 'SISTEMA', C.cyan],
     ['r', 'OS', 'Venezuela · Valencia'],
-    ['r', 'Uptime', 'construyendo desde 2025'],
+    ['r', 'Uptime', 'cofundador desde oct 2020'],
     ['r', 'Host', 'BaratongoVzla'],
     ['r', 'Kernel', 'Chief Tinkering Officer'],
     ['r', 'IDE', 'VS Code + Claude Code'],

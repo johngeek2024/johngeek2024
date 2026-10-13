@@ -13,18 +13,22 @@
 
 <img src="assets/neo/h-01.svg" alt="01 Sobre mí" width="100%"/>
 
-Soy cofundador y CTO de [BaratongoVzla](https://baratongovzla.com), en Valencia, Venezuela. Construyo tiendas, blogs y paneles de administración que cargan rápido, posicionan en Google y se pagan solos.
+**Hago videos que venden gadgets. Lo demás es consecuencia.**
 
-Mi trabajo es que las ideas funcionen de verdad: Pago Móvil, pedidos por WhatsApp, sitios bilingües e invitaciones de boda con sello de lacre y cuenta regresiva. Sí, también eso.
+Soy John Moreno, creador de contenido de tecnología y cofundador de [BaratongoVzla](https://baratongovzla.com), en Valencia, Venezuela. Llevo más de 70 videos de producto y uno de ellos, el del proyector que convirtió mi techo en un cine 4K, pasó de 1,3 millones de vistas. Eso se explica con un buen producto, un gancho de tres segundos y gente a la que le encanta ver un techo convertido en cine.
 
-<img src="assets/neo/modules.svg" alt="Cómo trabajo: primero rápido, SEO técnico de serie, pensado para Venezuela, bilingüe por defecto, cada proyecto con panel y seguridad primero." width="100%"/>
+Mi método es simple: cuento lo que el producto hace de verdad, sin humo, y con el humor justo para que veas el video completo. Un video aburrido es un anuncio que nadie pidió.
+
+Si eres una marca de tecnología, puedo hacerte el video que tu producto merece. Si solo vienes a mirar, lo que las marcas no te dicen lo cuento en mis redes. Y sí, también programo la tienda; pero eso es el dato curioso, no el titular.
+
+<img src="assets/neo/modules.svg" alt="Qué hago: videos que venden, gancho en tres segundos, sin humo, español para todos, marca propia y también programo." width="100%"/>
 
 <details>
 <summary><b>English summary</b></summary>
 
 <br/>
 
-Co-founder and CTO at BaratongoVzla (Valencia, Venezuela). I build e-commerce sites, blogs and admin panels with Astro, Next.js, TypeScript and Firebase. My sites are bilingual (Spanish, English, Chinese), built around local payment flows (Pago Móvil, Binance Pay) and WhatsApp order handling, with technical SEO included. I'm also an Amazon Influencer (@BaratongoVzla). Source code is private; the invitation projects below have public demos with fictional data.
+Tech and gadgets content creator, and co-founder and CTO of BaratongoVzla (Valencia, Venezuela). I've made 70+ product videos, one of them with 1.3M views. I explain what a product really does, in neutral Latin American Spanish, with humor and no hype. I'm also an Amazon Influencer (@BaratongoVzla) and I build the store's website myself. Open to UGC work with tech brands; the invitation projects below have public demos with fictional data.
 
 </details>
 

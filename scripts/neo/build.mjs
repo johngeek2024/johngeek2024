@@ -168,7 +168,7 @@ async function hero(stats) {
     ['r', 'Repos', `${stats.repos} · Stars ${stats.stars}`],
     ['r', 'Commits', `${stats.commits} (últimos 12 meses)`],
     ['r', 'Followers', `${stats.followers} · sync ${today}`],
-    ['r', 'Status', 'desplegando algo ahora mismo', C.green],
+    ['r', 'Status', 'grabando el próximo video', C.green],
   ];
   let y = 262;
   let info = '';
@@ -272,8 +272,8 @@ ${brackets(66, 84, 372, 630, 22, 'rgba(34,230,255,.7)', 'rgba(255,61,203,.7)', 1
   <text x="${x0 - 2}" y="150" class="d" font-size="46" fill="${C.white}">JONATHAN</text>
   <text x="${x0 - 2}" y="194" class="d" font-size="46" fill="${C.cyan}">MORENO</text>
 </g>
-<text x="${x0}" y="222" font-size="12" fill="${C.soft}">Tiendas, blogs y paneles que cargan</text>
-<text x="${x0}" y="239" font-size="12" fill="${C.soft}">rápido y se pagan solos<tspan class="blink" fill="${C.cyan}">_</tspan></text>
+<text x="${x0}" y="222" font-size="12" fill="${C.soft}">Videos de gadgets y tecnología</text>
+<text x="${x0}" y="239" font-size="12" fill="${C.soft}">que venden, sin humo<tspan class="blink" fill="${C.cyan}">_</tspan></text>
 ${info}
 ${palette}
 
@@ -309,12 +309,12 @@ function header(n, title) {
 // ───────────────────────── módulos (cómo trabajo) ─────────────────────────
 function modules() {
   const items = [
-    ['MOD_01', 'Primero rápido', 'Estático cuando se puede, imágenes optimizadas, nada de más.'],
-    ['MOD_02', 'SEO técnico de serie', 'Sitemap, datos estructurados, RSS y llms.txt para buscadores con IA.'],
-    ['MOD_03', 'Pensado para Venezuela', 'Pago Móvil, Binance Pay y cierre del pedido por WhatsApp.'],
-    ['MOD_04', 'Bilingüe por defecto', 'Español, inglés y chino en los sitios que lo necesitan.'],
-    ['MOD_05', 'Cada proyecto con panel', 'Pedidos, ventas, invitados o contenido, según el caso.'],
-    ['MOD_06', 'Seguridad primero', 'Reglas con pruebas y demos con datos ficticios.'],
+    ['MOD_01', 'Videos que venden', 'Demos de gadgets que explican el producto y cierran la compra.'],
+    ['MOD_02', 'Gancho en 3 segundos', 'Si no te atrapa antes del segundo 3, el video vuelve a empezar.'],
+    ['MOD_03', 'Sin humo', 'Lo que el producto hace de verdad, no lo que promete la caja.'],
+    ['MOD_04', 'Español para todos', 'Neutro, de México a Argentina. Los chistes viajan bien.'],
+    ['MOD_05', 'Marca propia', 'Cofundador de BaratongoVzla: más de 70 videos y 60K+ en TikTok.'],
+    ['MOD_06', 'Y sí, también programo', 'La tienda y el panel los armo yo. Si algo falla, fue el caché.'],
   ];
   const W = 900, cw = 292, ch = 118, g = 12;
   let body = '';
@@ -328,7 +328,7 @@ function modules() {
 <text x="${x + 16}" y="${y + 50}" class="d" font-size="15" fill="${C.white}">${esc(t)}</text>
 ${lines.map((l, k) => `<text x="${x + 16}" y="${y + 74 + k * 18}" font-size="12" fill="${C.soft}">${esc(l)}</text>`).join('')}`;
   });
-  return svg(W, ch * 2 + g, 'Cómo trabajo', body);
+  return svg(W, ch * 2 + g, 'Qué hago', body);
 }
 
 // ───────────────────────── tarjetas de proyecto ─────────────────────────
